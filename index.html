@@ -24,7 +24,7 @@
     
     img {
         height: 300px;
-        filter: blur(--blur);
+        filter: blur(100px);
         filter: grayscale(0%);
     }
     
@@ -34,7 +34,7 @@
         margin: auto;
         text-align: center;
         height: 50px;
-        width: 700px;
+    
     }
     
     .imgDisplay {
@@ -75,6 +75,7 @@
 <script>
 const theImage = document.querySelector('.theImage');
 const colorPicked = document.querySelector('.imgDisplay');
+const colorPicked2 = document.querySelector('.pop');
 
 function blurFunc() {
     var blurAmount = document.getElementById("blur").value;
@@ -89,10 +90,11 @@ function greyFunc() {
 }
 
 function colorPick() {
-    var colorPick = document.getElementById("colorPick").value;
-    console.log(colorPick);
+    var colorPicks = document.getElementById("colorPick").value;
+    console.log(colorPicks);
 
-    document.getElementsByClassName("imgDisplay").style.backgroundColor = "red";
+    colorPicked.style.backgroundColor = `${colorPicks}`
+    colorPicked2.style.color = `${colorPicks}`
 
 }
 </script>
