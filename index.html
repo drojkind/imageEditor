@@ -5,6 +5,7 @@
     <style>
     body {
         background-color: black;
+        height: 100vh;
     }
     
     .pop {
@@ -18,39 +19,52 @@
     }
     
     img {
-        height: 600px;
+        height: 300px;
         filter: blur(0px);
     }
     
     .controlGroup {
+    	padding: 30px;
+    	 display: block;
+        margin: auto;
         text-align: center;
-        height: 200px;
+        height: 50px;
         width: 700px;
     }
     
     .imgDisplay {
-        text-align: center;
+        display: block;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        width: 450px
     }
     
     p {
         color: white;
         display: inline;
     }
+    
+    #bodyFill {
+        height: 100vh;
+    }
     </style>
 </head>
 
 <body>
-    <h1>Update css variables with <span class="pop">JS</span></h1>
-    <div class="controlGroup">
-        <p>Spacing </p>
-        <input type="range">
-        <p>Blur </p>
-        <input type="range" min="1" max="10" id="blur" value="5" oninput="blurFunc()">
-        <p>Base Color </p>
-        <input type="range">
-    </div>
-    <div class="imgDisplay">
-        <img src="img.jpg" class="theImage" />
+    <div id="bodyFill">
+        <h1>Update css variables with <span class="pop">JS</span></h1>
+        <div class="controlGroup">
+            <p>Spacing </p>
+            <input type="range">
+            <p>Blur </p>
+            <input type="range" min="0" max="10" id="blur" value="0" oninput="blurFunc()">
+            <p>Base Color </p>
+            <input type="range">
+        </div>
+        <div class="imgDisplay">
+            <img src="img.jpg" class="theImage" />
+        </div>
     </div>
 </body>
 <script>
